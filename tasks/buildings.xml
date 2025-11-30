@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE world_architecture SYSTEM "buildings2.dtd">
+<!DOCTYPE world_architecture SYSTEM "buildings.dtd">
+<world_architecture xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                    xsi:noNamespaceSchemaLocation="buildings.xsd" 
+                    version="2.0">
 <world_architecture version="2.0"> <!-- Каталог знаменитых зданий по странам -->
   
   <!-- Уровень 1: Страна -->
