@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE world_architecture SYSTEM "buildings2.dtd">
 <world_architecture version="2.0"> <!-- Каталог знаменитых зданий по странам -->
   
   <!-- Уровень 1: Страна -->
