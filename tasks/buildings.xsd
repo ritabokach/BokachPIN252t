@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
-  
+
+  <!-- Корневой элемент -->
   <xs:element name="world_architecture">
     <xs:complexType>
       <xs:sequence>
@@ -10,26 +11,29 @@
               <xs:element name="architect" maxOccurs="unbounded">
                 <xs:complexType>
                   <xs:sequence>
-                    <xs:element name="building" maxOccurs="unbounded"/>
+                    <xs:element name="building" maxOccurs="unbounded">
+                      <xs:complexType>
+                        <xs:attribute name="code" type="xs:string" use="required"/>
+                        <!-- Год постройки -->
+                        <xs:attribute name="year" type="xs:gYear" use="required"/>
+                        <!-- Путь к картинке или URL -->
+                        <xs:attribute name="photo" type="xs:string" use="required"/>
+                      </xs:complexType>
+                    </xs:element>
                   </xs:sequence>
+                  <!-- Имя архитектора -->
                   <xs:attribute name="name" type="xs:string" use="required"/>
                 </xs:complexType>
               </xs:element>
             </xs:sequence>
+            <!-- ID страны -->
             <xs:attribute name="id" type="xs:ID" use="required"/>
           </xs:complexType>
         </xs:element>
       </xs:sequence>
+      <!-- Версия каталога -->
       <xs:attribute name="version" type="xs:string" use="required"/>
     </xs:complexType>
   </xs:element>
-  
-  <xs:element name="building">
-    <xs:complexType>
-      <xs:attribute name="year" type="xs:string" use="required"/>
-      <xs:attribute name="height" type="xs:string" use="optional"/>
-      <xs:attribute name="type" type="xs:string" use="optional"/>
-      <xs:attribute name="status" type="xs:string" use="optional"/>
-    </xs:complexType>
-  </xs:element>
+
 </xs:schema>

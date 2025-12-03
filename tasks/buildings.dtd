@@ -1,50 +1,14 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE world_architecture [
-  <!ELEMENT world_architecture (country+)>
-  <!ATTLIST world_architecture version CDATA #REQUIRED>
+<!ELEMENT world_architecture (country+)>
+<!ATTLIST world_architecture version CDATA #REQUIRED>
   
-  <!ELEMENT country (architect+)>
-  <!ATTLIST country id ID #REQUIRED>
+<!ELEMENT country (architect+)>
+<!ATTLIST country id ID #REQUIRED>
   
-  <!ELEMENT architect (building+)>
-  <!ATTLIST architect name CDATA #REQUIRED>
+<!ELEMENT architect (building+)>
+<!ATTLIST architect name CDATA #REQUIRED>
   
-  <!ELEMENT building EMPTY>
-  <!ATTLIST building year CDATA #REQUIRED>
-  <!ATTLIST building type CDATA #IMPLIED>
-  <!ATTLIST building height CDATA #IMPLIED>
-  <!ATTLIST building status CDATA #IMPLIED>
-]>
-<world_architecture version="2.0"> <!-- Каталог знаменитых зданий по странам -->
-
-  <!-- Уровень 1: Страна -->
-  <france id="FR">
-    <!-- Уровень 2: Архитектор -->
-    <eiffel name="Gustave Eiffel">
-      <!-- Уровень 3: Здание (листовой элемент) -->
-      <eiffel_tower year="1889" height="324m"/> <!-- Эйфелева башня, Париж -->
-    </eiffel>
-  </france>
-  
-  <italy id="IT">
-    <brunelleschi name="Filippo Brunelleschi">
-      <duomo year="1436"/> <!-- Собор Санта-Мария-дель-Фьоре, Флоренция -->
-    </brunelleschi>
-    <bernini name="Gian Lorenzo Bernini">
-      <st_peters year="1626"/> <!-- Собор Святого Петра, Рим -->
-    </bernini>
-  </italy>
-  
-  <india id="IN">
-    <shah_jahan name="Shah Jahan">
-      <taj_mahal year="1653" type="mausoleum"/> <!-- Тадж-Махал, Агра -->
-    </shah_jahan>
-  </india>
-  
-  <spain id="ES">
-    <gaudi name="Antoni Gaudi">
-      <sagrada_familia year="1882" status="under_construction"/> <!-- Саграда Фамилия, Барселона -->
-    </gaudi>
-  </spain>
-
-</world_architecture>
+<!ELEMENT building EMPTY>
+<!ATTLIST building year CDATA #REQUIRED>
+<!ATTLIST building type CDATA #IMPLIED>
+<!ATTLIST building height CDATA #IMPLIED>
+<!ATTLIST building status CDATA #IMPLIED> 
